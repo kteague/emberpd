@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="${request.locale_name}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Welcome to Passport Date</title>
+
+    <link href="${request.static_url('pd:static/style.css')}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+<div class="content">
+	Login
+</div>
+
+<div class="row">
+<div class="copyright">
+	Copyright &copy; Passport Date Media Inc.
+</div>
+</div>
+
+  </body>
+</html>
