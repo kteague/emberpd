@@ -1,0 +1,29 @@
+<div id="pdapp">
+  <header id="header">
+    <h1>Passport Date</h1>
+    <h2>Find love. Anywhere in the world.</h2>
+  </header>
+
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li>{{link-to "Home" "app.home"}}</li>
+      <li>{{link-to "Browse Profiles" "app.browse"}}</li>
+      <li>{{link-to "Edit Profile" "app.edit"}}</li>
+      <li>{{link-to "About" "about"}}</li>
+	  <li>(logged in as ...)</li>
+    </ul>
+  </div>
+  </nav>
+  
+  <section id="main">
+  
+   {{outlet}}
+
+  </section>
+
+</div>
+
+<footer id="info">
+  <p>&copy; 2015 Passport Date Media Inc.</p>
+</footer>
