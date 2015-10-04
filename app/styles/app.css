@@ -18,6 +18,64 @@ body {
 	font-smoothing: antialiased;
 }
 
+/* info styles */
+
+#pdinfo h1 {
+	width: 100%;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+	color: #ffffff;
+	color: rgba(255, 255, 255, 0.6);
+	text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
+#pdinfo .promote {
+	width: 100%;
+	font-size: 19px;
+	text-align: center;
+	color: #333333;
+}
+
+#content b {
+	color: #028737;
+}
+
+#pdinfo div#login {
+	background-color: #ffffff;
+	padding: 15px;
+}
+
+#content {
+	background-color: #ffffff;
+	padding: 15px;
+	margin-top: 20px;
+	border-radius: 3px;
+}
+
+#callout {
+	margin: 20px 0px;
+	padding: 15px;
+	border: 1px solid #d3d3d3;
+	border-radius: 3px;
+	background-color: #fafafa;
+}
+
+#pdinfo span.button {
+	border: 1px solid #d3d3d3;
+	padding: 5px 20px;
+	margin-left: 15px;
+	border-radius: 3px;
+	background-color: #ffffff;
+}
+
+/* app styles */
+
 #pdapp {
 	background: #fff;
 	background: rgba(255, 255, 255, 0.9);

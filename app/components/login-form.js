@@ -13,8 +13,5 @@ export default Ember.Component.extend({
       });
     },
 
-    authenticateWithFacebook() {
-      this.get('session').authenticate('authenticator:torii', 'facebook');
-    }
   }
 });
