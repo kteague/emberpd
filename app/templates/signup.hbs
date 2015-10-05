@@ -6,7 +6,7 @@
 <p class="promote">Join the best <b>free international</b> dating site.</p>
 <p class="promote" style="margin-bottom: 30px;">Meet people <b>anywhere</b> in the world.</p>
 
-<form {{action 'startProfile' on='submit'}}>
+<form>
   <div class="form-inline">
   
     <div class="form-group">
@@ -26,7 +26,7 @@
 		</select>
 	</div>
 
-	<button type="submit" class="btn btn-default">Continue</button>
+	<button type="submit" class="btn btn-default" {{action "startProfile"}}>Continue</button>
 	
   </div>
 

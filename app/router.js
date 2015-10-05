@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
 	this.route('signup');
+	this.route('signup2');
 	this.route('login');
 	this.route('auth-error');
 	this.route('about');

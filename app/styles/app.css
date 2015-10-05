@@ -74,6 +74,15 @@ body {
 	background-color: #ffffff;
 }
 
+/* forms */
+label {
+	margin-top: 10px;
+}
+
+div.field {
+	margin-top: 10px;
+}
+
 /* app styles */
 
 #pdapp {

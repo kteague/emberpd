@@ -1,0 +1,77 @@
+<div id="pdinfo">
+<h1>Passport Date</h1>
+
+<div id="content">
+
+<p class="promote">Almost done!</p>
+<p class="promote">Always <b>free</b> to message.</p>
+
+<form {{action 'createProfile' on='submit'}}>
+  <div class="form-horizontal">
+  
+    <div class="form-group">
+	    <label class="col-sm-4 control-label">Country</label>
+		<div class="col-sm-8 field">
+		<select name="country" class="form-control">
+		<option value="Canada">Canada</option>
+		<option value="Ukraine">Ukraine</option>
+		<option value="United States of America">United States of America</option>
+		</select>
+		</div>
+		
+	    <label class="col-sm-4 control-label">City</label>
+		<div class="col-sm-8 field">
+		{{input name="city" type="text" size="30"}}
+		</div>
+	</div>
+	
+    <div class="form-group">
+	    <label class="col-sm-4 control-label">Birth Month</label>
+		<div class="col-sm-8 field">
+		{{input type="text" name="month" size="2"}}
+		</div>
+	</div>
+
+    <div class="form-group">
+	    <label class="col-sm-4 control-label">Birth Day</label>
+		<div class="col-sm-8 field">
+		{{input type="text" name="day" size="2"}}
+		</div>
+	</div>
+
+    <div class="form-group">
+	    <label class="col-sm-4 control-label">Birthdate Year</label>
+		<div class="col-sm-8 field">
+		{{input type="text" name="year" size="4"}}
+		</div>
+	</div>
+
+    <div class="form-group">
+	    <label class="col-sm-4 control-label">Email</label>
+		<div class="col-sm-8 field">
+		{{input type="text" name="email" size="30"}}
+		</div>
+	</div>
+
+    <div class="form-group">
+	    <label class="col-sm-4 control-label">Confirm Email</label>
+		<div class="col-sm-8 field">
+		{{input type="text" name="email-confirm" size="30"}}
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-8 field">
+		<button type="submit" class="btn btn-default" {{action "createProfile"}}>Continue</button>
+		</div>
+	</div>
+	
+  </div>
+
+</form>
+
+<div id="callout">Already a member? <span class="button">{{link-to "Sign in" "login"}}</span></div>
+
+</div>
+</div>
