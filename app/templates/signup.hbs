@@ -3,19 +3,19 @@
 
 <div id="content">
 
-{{#if firstPage}}
+<section class="first-page">
 <p class="promote">Join the best <b>free international</b> dating site.</p>
 <p class="promote" style="margin-bottom: 30px;">Meet people <b>anywhere</b> in the world.</p>
-{{/if}}
+</section>
 
-{{#if secondPage}}
+<section class="second-page">
 <p class="promote">Almost done!</p>
 <p class="promote">Always <b>free</b> to message.</p>
-{{/if}}
+</section>
 
 <form>
 
-	{{#if firstPage}}
+	<section class="first-page">
 	<div class="form-inline">
     <div class="form-group">
 	    <label>I'm a </label>
@@ -36,9 +36,9 @@
 
 	<button type="submit" class="btn btn-default" {{action "secondPage"}}>Continue</button>
 	</div>
-	{{/if}}
+	</section>
 	
-	{{#if secondPage}}
+	<section class="second-page">
     <div class="form-horizontal">
   
       <div class="form-group">
@@ -100,7 +100,7 @@
   	</div>
 	
     </div>
-	{{/if}}
+	</section>
 
 </form>
 

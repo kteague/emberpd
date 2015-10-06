@@ -84,6 +84,10 @@ div.field {
 	margin-top: 10px;
 }
 
+section.second-page {
+	display: none;
+}
+
 /* app styles */
 
 #pdapp {
