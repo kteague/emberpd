@@ -3,12 +3,20 @@
 
 <div id="content">
 
+{{#if firstPage}}
 <p class="promote">Join the best <b>free international</b> dating site.</p>
 <p class="promote" style="margin-bottom: 30px;">Meet people <b>anywhere</b> in the world.</p>
+{{/if}}
+
+{{#if secondPage}}
+<p class="promote">Almost done!</p>
+<p class="promote">Always <b>free</b> to message.</p>
+{{/if}}
 
 <form>
-  <div class="form-inline">
-  
+
+	{{#if firstPage}}
+	<div class="form-inline">
     <div class="form-group">
 	    <label>I'm a </label>
 		<select name="orientation" class="form-control">
@@ -26,9 +34,73 @@
 		</select>
 	</div>
 
-	<button type="submit" class="btn btn-default" {{action "startProfile"}}>Continue</button>
+	<button type="submit" class="btn btn-default" {{action "secondPage"}}>Continue</button>
+	</div>
+	{{/if}}
 	
-  </div>
+	{{#if secondPage}}
+    <div class="form-horizontal">
+  
+      <div class="form-group">
+  	    <label class="col-sm-4 control-label">Country</label>
+  		<div class="col-sm-8 field">
+  		<select name="country" class="form-control">
+  		<option value="Canada">Canada</option>
+  		<option value="Ukraine">Ukraine</option>
+  		<option value="United States of America">United States of America</option>
+  		</select>
+  		</div>
+		
+  	    <label class="col-sm-4 control-label">City</label>
+  		<div class="col-sm-8 field">
+  		{{input name="city" type="text" size="30"}}
+  		</div>
+  	</div>
+	
+      <div class="form-group">
+  	    <label class="col-sm-4 control-label">Birth Month</label>
+  		<div class="col-sm-8 field">
+  		{{input type="text" name="month" size="2"}}
+  		</div>
+  	</div>
+
+      <div class="form-group">
+  	    <label class="col-sm-4 control-label">Birth Day</label>
+  		<div class="col-sm-8 field">
+  		{{input type="text" name="day" size="2"}}
+  		</div>
+  	</div>
+
+      <div class="form-group">
+  	    <label class="col-sm-4 control-label">Birthdate Year</label>
+  		<div class="col-sm-8 field">
+  		{{input type="text" name="year" size="4"}}
+  		</div>
+  	</div>
+
+      <div class="form-group">
+  	    <label class="col-sm-4 control-label">Email</label>
+  		<div class="col-sm-8 field">
+  		{{input type="text" name="email" size="30"}}
+  		</div>
+  	</div>
+
+      <div class="form-group">
+  	    <label class="col-sm-4 control-label">Confirm Email</label>
+  		<div class="col-sm-8 field">
+  		{{input type="text" name="email-confirm" size="30"}}
+  		</div>
+  	</div>
+	
+  	<div class="form-group">
+  		<div class="col-sm-4"></div>
+  		<div class="col-sm-8 field">
+  		<button type="submit" class="btn btn-default" {{action "createProfile"}}>Continue</button>
+  		</div>
+  	</div>
+	
+    </div>
+	{{/if}}
 
 </form>
 
