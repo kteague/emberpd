@@ -19,6 +19,8 @@ module.exports = function(environment) {
   };
   
   if (environment === 'development') {
+	  ENV.LOG_TRANSITIONS = true,
+	  ENV.LOG_TRANSITIONS_INTERNAL = true,
 	  ENV.contentSecurityPolicy = {
 	    'default-src': "'none'",
 	    'script-src': "'self' 'unsafe-eval'",

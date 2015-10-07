@@ -20,7 +20,7 @@ export default Ember.Route.extend( UnauthenticatedRouteMixin, {
 				lastlogin: 'today'
 			});
 			profile.save().then(function() {
-				this.transitionTo('welcome', profile);
+				this.transitionTo('welcome');
 			});
 		}
 		
