@@ -1,0 +1,29 @@
+Passport Date shortlist:
+
+ * Have sign-up form create appropriate record in PostgreSQL
+ 
+ * Use Marshmallow lib for JSON API help?
+ 
+ * Post sign-up? Email auth to start? How to handle?
+
+ * Decide basic fields to start with!
+ 
+ * Photos: ability to upload photos
+ 
+ * Fixtures: load a set of data into the system
+
+ * Browse profiles view
+ 
+ * Search profiles view
+
+ * Messages model
+ 
+ * Send messages
+ 
+ * Read messages
+ 
+ * Email notifications
+ 
+---- First milestone: minimal feature set for functional site ----
+
+
