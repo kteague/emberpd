@@ -1,10 +1,17 @@
-Passport Date shortlist:
+Passport Date roadmap:
 
- * Have sign-up form create appropriate record in PostgreSQL
+ * DONE: skeleton for platform: Ember, Pyramid and PostgreSQL
  
- * Use Marshmallow lib for JSON API help?
+ * Have sign-up form create appropriate record in PostgreSQL.
+  
+ * Post sign-up email validation to avoid bots.
+
+ * Authentication: handle login
  
- * Post sign-up? Email auth to start? How to handle?
+ * Authentication: handle password reset
+
+---- Zero milestone: authenticating app with sign-up ----
+
 
  * Decide basic fields to start with!
  
@@ -27,3 +34,22 @@ Passport Date shortlist:
 ---- First milestone: minimal feature set for functional site ----
 
 
+ * Internationalize all text fields
+ 
+ * Translation to Russian (only two langs until UI is stable)
+ 
+ * Specify native language
+ 
+ * Ability to write profile in multiple languages
+
+---- Second milestone: Internationalization ----
+
+
+ * Profile fields: religion, alcohol, body type, height, etc.
+ 
+ * Advanced search
+ 
+ * Update second lang translations
+
+---- Third milestone: stable field set for profiles ----
+ 

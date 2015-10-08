@@ -12,15 +12,19 @@ export default Ember.Route.extend( UnauthenticatedRouteMixin, {
 		},
 		
 		createProfile: function() {
-			var profile = this.store.createRecord('profile', {
-				username: 'bob',
-				orientation: 'straight',
-				gender: 'male',
-				firstname: 'kevin',
-				lastlogin: 'today'
+			var signup = this.store.createRecord('signup', {
+				orientation: '',
+				gender: '',
+				country: '',
+				city: '',
+				day: '',
+				month: '',
+				year: '',
+				email: ''
 			});
+			var _this = this;
 			profile.save().then(function() {
-				this.transitionTo('welcome');
+				_this.transitionTo('welcome');
 			});
 		}
 		
