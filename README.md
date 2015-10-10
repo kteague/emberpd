@@ -1,6 +1,8 @@
 # Emberpd
 
-This is the Ember.js powered front end to the Passport Date site.
+This is the Ember.js powered front end to the Passport Date application.
+
+You will need pyramidpd to run the JSON API for the back end.
 
 ## Prerequisites
 

@@ -11,7 +11,7 @@ export default Ember.Route.extend( UnauthenticatedRouteMixin, {
 			$( ".first-page" ).hide();
 		},
 		
-		createProfile: function() {
+		signUp: function() {
 			var signup = this.store.createRecord('signup', {
 				orientation: '',
 				gender: '',
@@ -23,11 +23,11 @@ export default Ember.Route.extend( UnauthenticatedRouteMixin, {
 				email: ''
 			});
 			var _this = this;
-			profile.save().then(function() {
+			signup.save().then(function() {
 				_this.transitionTo('welcome');
 			});
 		}
-		
+	
 	}
 
 });
