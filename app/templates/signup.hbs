@@ -20,17 +20,17 @@
     <div class="form-group">
 	    <label>I'm a </label>
 		{{#x-select value=model.orientation class="form-control"}}
-		  {{#x-option value="homosexual"}}Homosexual{{/x-option}}
-		  {{#x-option value="bisexual"}}Bisexual{{/x-option}}
 		  {{#x-option value="straight"}}Straight{{/x-option}}
+		  {{#x-option value="bisexual"}}Bisexual{{/x-option}}
+		  {{#x-option value="homosexual"}}Homosexual{{/x-option}}
 		{{/x-select}}
 	</div>
 	
 	<div class="form-group">
-		<select name="gender" class="form-control">
-		<option value="man">Man</option>
-		<option value="woman">Woman</option>
-		</select>
+		{{#x-select value=model.gender class="form-control"}}
+		  {{#x-option value="man"}}Man{{/x-option}}
+		  {{#x-option value="man"}}Woman{{/x-option}}
+		{{/x-select}}
 	</div>
 
 	<button type="submit" class="btn btn-default" {{action "secondPage"}}>Continue</button>
@@ -43,11 +43,14 @@
       <div class="form-group">
   	    <label class="col-sm-4 control-label">Country</label>
   		<div class="col-sm-8 field">
-  		<select name="country" class="form-control">
-  		<option value="Canada">Canada</option>
-  		<option value="Ukraine">Ukraine</option>
-  		<option value="United States of America">United States of America</option>
-  		</select>
+		
+		{{#x-select value=model.country class="form-control"}}
+		  {{#x-option value="Canada"}}Canada{{/x-option}}
+		  {{#x-option value="Ukraine"}}Ukraine{{/x-option}}
+		  {{#x-option value="Germany"}}Germany{{/x-option}}
+		  {{#x-option value="France"}}France{{/x-option}}
+		{{/x-select}}
+		
   		</div>
 		
   	    <label class="col-sm-4 control-label">City</label>

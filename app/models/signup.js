@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 var Signup = DS.Model.extend({
 	orientation: DS.attr('string', {defaultValue: 'straight'}),
-	gender: DS.attr('string'),
+	gender: DS.attr('string', {defaultValue: 'male'}),
 	country: DS.attr('string'),
 	city: DS.attr('string'),
 	day: DS.attr('string'),
