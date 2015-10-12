@@ -3,31 +3,29 @@ import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-
 import Profile from '../models/profile';
 
 export default Ember.Route.extend( UnauthenticatedRouteMixin, {
-
+	
+	model:  function() {
+		return this.store.createRecord('signup');
+	},
+	
+    setupController: function(controller, model) {
+        controller.set('model', model);
+    },
+	
 	actions: {
 		
 		secondPage: function() {
 			$( ".second-page" ).show();
 			$( ".first-page" ).hide();
 		},
-		
+
 		signUp: function() {
-			var signup = this.store.createRecord('signup', {
-				orientation: '',
-				gender: '',
-				country: '',
-				city: '',
-				day: '',
-				month: '',
-				year: '',
-				email: ''
-			});
 			var _this = this;
-			signup.save().then(function() {
+			this.controller.model.save().then(function() {
 				_this.transitionTo('welcome');
 			});
 		}
-	
+
 	}
 
 });
