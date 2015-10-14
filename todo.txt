@@ -2,7 +2,7 @@ Passport Date roadmap:
 
  * DONE: skeleton for platform: Ember, Pyramid and PostgreSQL
  
- * Have sign-up form create appropriate record in PostgreSQL.
+ * DONE: Have sign-up form create appropriate record in PostgreSQL.
   
  * Post sign-up email validation to avoid bots.
 
