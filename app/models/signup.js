@@ -8,7 +8,8 @@ var Signup = DS.Model.extend({
 	day: DS.attr('string'),
 	month: DS.attr('string'),
 	year: DS.attr('string'),
-	email: DS.attr('string')
+	email: DS.attr('string'),
+	profile_id: DS.attr('string')
 });
 
 export default Signup;
