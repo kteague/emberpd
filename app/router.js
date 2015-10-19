@@ -9,7 +9,6 @@ Router.map(function() {
     this.route('signup');
     this.route('welcome');
     this.route('login');
-    this.route('auth-error');
     this.route('about');
     this.route('activate');
     this.route('app', { path: '/' }, function() {

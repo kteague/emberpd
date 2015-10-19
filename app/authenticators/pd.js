@@ -10,18 +10,18 @@ export default BaseAuthenticator.extend({
  	},
 	
 	authenticate(identification, password) {
-		console.log('auth: authenticate: ' + identification + ' : ' + password)
 		
 	    return new RSVP.Promise((resolve, reject) => {
 	    	const data = {};
-	    	data['user'] = { password };
-	    	data['user']['email'] = identification;
+	    	data['password'] = password;
+	    	data['identification'] = identification;
 			
 	    	this.makeRequest(data).then(function(response) {
 	       		run(null, resolve, response);
 	     	}, function(xhr) {
 	        	run(null, reject, xhr.responseJSON || xhr.responseText);
 	      	});
+			
 	    });
 	},
 	

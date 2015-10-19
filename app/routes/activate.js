@@ -15,17 +15,15 @@ export default Ember.Route.extend({
 			var k = this.controller.get('k');
 			var password = this.controller.get('password');
 			
-			$.post('/api/1/set_password', { id: id, k: k, p: password }).then(
-				this.transitionTo('app.home')
-			);
+			$.post('/api/1/set_password', { id: id, k: k, p: password })
 			
 	        this.get('session').authenticate(
 				'authenticator:pd', this.controller.model.get('email'), password
 			).catch((reason) => {
 	        		this.set('errorMessage', reason.error);
 	        });
-			console.log('what?')
 			
+			this.transitionTo('app.home')
 		}
 
 	}
