@@ -1,7 +1,7 @@
 {
   "name": "emberpd",
-  "version": "0.0.0",
-  "description": "Small description for emberpd goes here",
+  "version": "0.1.0",
+  "description": "App for Passport Date site",
   "private": true,
   "directories": {
     "doc": "doc",

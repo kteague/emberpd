@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	
+	session: Ember.inject.service('session'),
+	
 	model(params) {
 		return this.store.queryRecord('signup', params);
 	},
@@ -16,7 +18,14 @@ export default Ember.Route.extend({
 			$.post('/api/1/set_password', { id: id, k: k, p: password }).then(
 				this.transitionTo('app.home')
 			);
-
+			
+	        this.get('session').authenticate(
+				'authenticator:pd', this.controller.model.get('email'), password
+			).catch((reason) => {
+	        		this.set('errorMessage', reason.error);
+	        });
+			console.log('what?')
+			
 		}
 
 	}
