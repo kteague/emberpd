@@ -7,8 +7,7 @@ export default Ember.Component.extend({
 
   actions: {
     authenticateWithPd() {
-      let data = this.getProperties('identification', 'password');
-      this.get('session').authenticate('authenticator:pd', data).catch((reason) => {
+      this.get('session').authenticate('authenticator:pd', this.get('identification'), this.get('password')).catch((reason) => {
         this.set('errorMessage', reason.error);
       });
     },
