@@ -4,8 +4,9 @@ import BaseAuthorizer from 'ember-simple-auth/authorizers/base';
 const { isEmpty } = Ember;
 
 export default BaseAuthorizer.extend({
+	session: Ember.inject.service('session'),
+	
 	authorize(data, block) {
-		console.log('what is data? ' + data)
 		
 		const userToken          = data['token'];
 		const userIdentification = data['email'];
@@ -15,7 +16,8 @@ export default BaseAuthorizer.extend({
 	      block('Authorization', `Token ${authData}`);
 	    }
 		
-		console.log('authorize: authorize: ' + data + ' : block : ' + block)
+		console.log('authorize: ' + data)
 
 	}
+
 });
