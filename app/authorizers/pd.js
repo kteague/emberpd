@@ -6,13 +6,13 @@ const { isEmpty } = Ember;
 export default BaseAuthorizer.extend({
 	session: Ember.inject.service('session'),
 	
-	authorize(data, block) {
+	authorize(data, block) {		
+		const token = data['token'];
+		const identification = data['email'];
+		console.log('Authorize: ' + identification)
 		
-		const userToken          = data['token'];
-		const userIdentification = data['email'];
-		
-	    if (!isEmpty(userToken) && !isEmpty(userIdentification)) {
-	      block('Authorization', `${userToken}:${userIdentification}`);
+	    if (!isEmpty(token) && !isEmpty(identification)) {
+	      block('Authorization', `${token}:${identification}`);
 	    }
 	}
 

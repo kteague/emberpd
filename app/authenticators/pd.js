@@ -19,7 +19,7 @@ export default BaseAuthenticator.extend({
  	},
 	
 	authenticate(identification, password) {
-		
+		console.log('Authenticate: ' + identification)
 	    return new RSVP.Promise((resolve, reject) => {
 	    	const data = {};
 	    	data['password'] = password;
