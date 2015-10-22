@@ -6,7 +6,6 @@ const { RSVP, run } = Ember;
 export default BaseAuthenticator.extend({
 	
 	restore(data) {
-		console.log('auth: restore: ' + data);
 	    const { tokenAttributeName, identificationAttributeName } = ('token', 'identification');
 	    const tokenAttribute = get(data, tokenAttributeName);
 	    const identificationAttribute = get(data, identificationAttributeName);

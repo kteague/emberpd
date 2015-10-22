@@ -12,12 +12,8 @@ export default BaseAuthorizer.extend({
 		const userIdentification = data['email'];
 		
 	    if (!isEmpty(userToken) && !isEmpty(userIdentification)) {
-	      const authData = `token="${userToken}", email="${userIdentification}"`;
-	      block('Authorization', `Token ${authData}`);
+	      block('Authorization', `${userToken}:${userIdentification}`);
 	    }
-		
-		console.log('authorize: ' + data)
-
 	}
 
 });
