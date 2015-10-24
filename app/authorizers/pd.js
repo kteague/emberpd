@@ -9,7 +9,6 @@ export default BaseAuthorizer.extend({
 	authorize(data, block) {		
 		const token = data['token'];
 		const identification = data['email'];
-		console.log('Authorize: ' + identification)
 		
 	    if (!isEmpty(token) && !isEmpty(identification)) {
 	      block('Authorization', `${token}:${identification}`);

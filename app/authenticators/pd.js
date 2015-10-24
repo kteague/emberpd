@@ -1,16 +1,15 @@
 import Ember from 'ember';
 import BaseAuthenticator from 'ember-simple-auth/authenticators/base';
 
-const { RSVP, run } = Ember;
+const { RSVP, run, get, isEmpty } = Ember;
 
 export default BaseAuthenticator.extend({
 	
 	restore(data) {
-	    const { tokenAttributeName, identificationAttributeName } = ('token', 'identification');
-	    const tokenAttribute = get(data, tokenAttributeName);
-	    const identificationAttribute = get(data, identificationAttributeName);
+    const token = get(data, 'token');
+	    const identification = get(data, 'email');
 	    return new RSVP.Promise((resolve, reject) => {
-			if (!isEmpty(tokenAttribute) && !isEmpty(identificationAttribute)) {
+			if (!isEmpty(token) && !isEmpty(identification)) {
 				resolve(data);
 			} else {
 				reject();
@@ -19,7 +18,6 @@ export default BaseAuthenticator.extend({
  	},
 	
 	authenticate(identification, password) {
-		console.log('Authenticate: ' + identification)
 	    return new RSVP.Promise((resolve, reject) => {
 	    	const data = {};
 	    	data['password'] = password;
