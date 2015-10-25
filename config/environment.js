@@ -18,7 +18,7 @@ module.exports = function(environment) {
     }
   };
   
-  //ENV['ember-simple-auth'] = { routeAfterAuthentication: 'app.home' };
+  ENV['ember-simple-auth'] = { routeAfterAuthentication: 'app.home' };
 
   if (environment === 'development') {
 	  ENV.LOG_TRANSITIONS = true,

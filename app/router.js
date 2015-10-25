@@ -11,7 +11,7 @@ Router.map(function() {
     this.route('login');
     this.route('about');
     this.route('activate');
-    this.route('app', { path: '/' }, function() {
+    this.route('app', { resetNamespace: true }, function() {
         this.route('home');
         this.route('edit');
         this.route('browse');

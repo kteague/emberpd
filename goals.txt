@@ -1,0 +1,10 @@
+Short term goals
+----------------
+
+Login:
+
+ * Logout!
+ 
+ * Forgot your password?
+ 
+ 

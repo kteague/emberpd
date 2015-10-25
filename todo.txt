@@ -4,7 +4,7 @@ Passport Date roadmap:
  
  * DONE: Have sign-up form create appropriate record in PostgreSQL.
   
- * Post sign-up email validation to avoid bots.
+ * DONE: Post sign-up email validation to avoid bots.
 
  * Authentication: handle login
  
