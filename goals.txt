@@ -1,9 +1,11 @@
 Short term goals
 ----------------
 
-Login:
+Signup:
 
- * Logout!
+ * Validations: email
+ 
+Login:
  
  * Forgot your password?
  
