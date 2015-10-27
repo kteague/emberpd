@@ -14,7 +14,7 @@ export default Ember.Component.extend({
       this.get('session').authenticate(
         'authenticator:pd', this.get('identification'), this.get('password')
       ).catch((reason) => {
-        this.set('errorMessage', 'Login Failed');
+        this.set('errorMessage', reason.message);
       }).finally( () => {
         this.controller.set('isLoggingIn', false);
       });
