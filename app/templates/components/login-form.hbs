@@ -1,5 +1,18 @@
 <div id="login">
 
+{{#if errorMessage}}
+  <div class="alert alert-danger">
+    <p>
+      <code>{{errorMessage}}</code>
+    </p>
+    {{#if errorCode}}
+    <p>Do not have an account? {{link-to "Join now" "signup"}}.</p>
+    {{else}}
+    <p>Forgot your password? {{link-to "Reset your password" "passwordreset"}}.</p>
+    {{/if}}
+  </div>
+{{/if}}
+
 <form>
   
   <div class="form-group">
@@ -22,14 +35,5 @@
   </button>
 
 </form>
-
-{{#if errorMessage}}
-  <div class="alert alert-danger">
-    <p>
-      <strong>Login failed:</strong> <code>{{errorMessage}}</code>
-    </p>
-  </div>
-
-{{/if}}
 
 </div>
