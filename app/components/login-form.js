@@ -15,6 +15,7 @@ export default Ember.Component.extend({
         'authenticator:pd', this.get('identification'), this.get('password')
       ).catch((reason) => {
         this.set('errorMessage', reason.message);
+        this.set('errorCode', reason.code);
       }).finally( () => {
         this.controller.set('isLoggingIn', false);
       });
