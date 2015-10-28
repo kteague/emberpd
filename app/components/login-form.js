@@ -17,7 +17,7 @@ export default Ember.Component.extend({
         this.set('errorMessage', reason.message);
         this.set('errorCode', reason.code);
       }).finally( () => {
-        this.controller.set('isLoggingIn', false);
+        this.set('isLoggingIn', false);
       });
     },
 
