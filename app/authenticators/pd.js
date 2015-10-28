@@ -9,11 +9,11 @@ export default BaseAuthenticator.extend({
     const token = get(data, 'token');
 	    const identification = get(data, 'email');
 	    return new RSVP.Promise((resolve, reject) => {
-			if (!isEmpty(token) && !isEmpty(identification)) {
-				resolve(data);
-			} else {
-				reject();
-			}
+  			if (!isEmpty(token) && !isEmpty(identification)) {
+  				resolve(data);
+  			} else {
+  				reject();
+  			}
 	    });
  	},
 	
@@ -21,14 +21,12 @@ export default BaseAuthenticator.extend({
 	    return new RSVP.Promise((resolve, reject) => {
 	    	const data = {};
 	    	data['password'] = password;
-	    	data['identification'] = identification;
-			
+	    	data['identification'] = identification;			
 	    	this.makeRequest(data).then(function(response) {
 	       		run(null, resolve, response);
 	     	}, function(xhr) {
 	        	run(null, reject, xhr.responseJSON || xhr.responseText);
 	      	});
-			
 	    });
 	},
 	
@@ -36,7 +34,7 @@ export default BaseAuthenticator.extend({
 		return RSVP.resolve();
 	},
 	
-    makeRequest(data) {
+  makeRequest(data) {
 		return Ember.$.ajax({
 			url: '/api/1/sign_in',
 			type: 'POST',
@@ -46,6 +44,6 @@ export default BaseAuthenticator.extend({
 			  xhr.setRequestHeader('Accept', settings.accepts.json);
 			}
 		});
-    }
+  }
 
 });
