@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
     this.route('signup');
     this.route('passwordreset');
+    this.route('set_new_password');
     this.route('welcome');
     this.route('login');
     this.route('about');
