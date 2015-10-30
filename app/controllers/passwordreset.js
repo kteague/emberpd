@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import { makeAjaxRequest } from 'emberpd/junkdrawer';
 
 const { RSVP, run } = Ember;
 
@@ -6,48 +7,34 @@ export default Ember.Controller.extend({
   
   isSendingReset: false,
   resetEmailSent: false,
+  errorCode: '0',
   
   actions: {
-        
+    
     sendPasswordReset: function () {
-      var _this = this;
-      this.set('isSendingReset', true);
-      var email = this.get('email');      
-    	const data = {};
-      data['email'] = email;
       
-      this.makeRequest(data).then(function(value) {
-        _this.set('resetEmailSent', true);
-      }, function(reason) {
-        _this.set('errorMessage', reason.message);
-        _this.set('errorCode', reason.code);
+      this.set('isSendingReset', true);
+      this.set('errorCode', '0');
+      var data = {'email': this.get('email')};
+      
+      new RSVP.Promise((resolve, reject) => {
+	    	makeAjaxRequest('/api/1/reset_password', data).then(function(response) {
+	        run(null, resolve, response);
+	     	}, function(xhr) {
+	        run(null, reject, xhr.responseJSON);
+	      });
+      }).catch((reason) => {
+        this.set('errorMessage', reason.message);
+        this.set('errorCode', reason.code);
+      }).finally(() => {
+        this.set('isSendingReset', false);
+        if (this.errorCode == '0') {
+          this.set('resetEmailSent', true);
+        }
       });
       
-      this.set('isSendingReset', false);
-
-      //catch((reason) => {
-      //  this.set('errorMessage', reason.message);
-      //  this.set('errorCode', reason.code);
-      //}).finally(() => {
-      //  this.set('isSendingReset', false);
-      //  this.set('resetEmailSent', true);        
-      //});
-
     }
-      
   },
-
-  makeRequest(data) {
-    return	Ember.$.ajax({
-    		url: '/api/1/reset_password',
-    		type: 'POST',
-    		dataType: 'json',
-    		data,
-    		beforeSend(xhr, settings) {
-    		  xhr.setRequestHeader('Accept', settings.accepts.json);
-    		}
-    });
-  }
 
 });
 
