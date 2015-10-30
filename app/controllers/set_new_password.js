@@ -4,15 +4,15 @@ import { makeAjaxRequest } from 'emberpd/junkdrawer';
 const { RSVP, run } = Ember;
 
 export default Ember.Controller.extend({
-	queryParams: ['id', 'k'],
-  isSendingReset: false,
+	queryParams: ['id', 'k', 'email'],
+  isSettingPassword: false,
 	session: Ember.inject.service('session'),
   
 	actions: {
 
 		setPassword: function() {
       
-      this.set('isSendingReset', true);
+      this.set('isSettingPassword', true);
       
 			var data = {
         'id':this.get('id'), 'k':this.get('k'), 'p':this.get('password'), 'n':'y'
@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
 	        run(null, reject, xhr.responseJSON);
 	      });
       }).finally(() => {
-        this.set('isSendingReset', false);
+        this.set('isSettingPassword', false);
   	    this.get('session').authenticate(
   				'authenticator:pd', this.get('email'), this.get('password')
   			).catch((reason) => {
