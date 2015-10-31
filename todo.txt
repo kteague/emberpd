@@ -6,9 +6,9 @@ Passport Date roadmap:
   
  * DONE: Post sign-up email validation to avoid bots.
 
- * Authentication: handle login
+ * DONE: Authentication: handle login
  
- * Authentication: handle password reset
+ * DONE: Authentication: handle password reset
 
 ---- Zero milestone: authenticating app with sign-up ----
 

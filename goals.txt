@@ -6,7 +6,6 @@ Signup:
  * Validations: email
  
 Login:
- 
- * Forgot your password?
- 
+
+ * clean-up and polish 
  
