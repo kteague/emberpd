@@ -13,11 +13,11 @@ Router.map(function() {
     this.route('login');
     this.route('about');
     this.route('activate');
-    this.route('app', { resetNamespace: true }, function() {
+    this.route('app', function() {
         this.route('home');
         this.route('edit');
         this.route('browse');
-        this.route('profile', { path: '/profile/:profile_id' });		
+        this.route('profile', { path: 'profile/:profile_id' });		
     });
 });
 

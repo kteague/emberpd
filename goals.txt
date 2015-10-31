@@ -1,11 +1,15 @@
 Short term goals
 ----------------
 
-Signup:
+Profile:
 
- * Validations: email
+ * Edit!
+ * Upload photos
  
-Login:
+Accounts:
 
- * clean-up and polish 
- 
+ * Validations:
+  - email
+  - password checking
+  - sign-up dates
+  - test suite
