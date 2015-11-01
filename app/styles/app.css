@@ -20,6 +20,10 @@ body {
 
 /* info styles */
 
+#pdinfo {
+  margin: 0px 30px;
+}
+
 #pdinfo h1 {
 	width: 100%;
 	font-size: 70px;
