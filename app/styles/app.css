@@ -152,6 +152,15 @@ section.second-page {
   margin: 0;
 }
 
+#pdapp h4 {
+  color: #354F00;
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
 #pdapp .tagline {
   color: #567714;
   display: block;
@@ -162,6 +171,29 @@ section.second-page {
 #pdapp .love {
   color: #D46A6A;
   font-size: 70%;
+}
+
+#pdapp #profile_photo {
+  height: 225px;
+  width: 225px;
+  float: left;
+  margin-left: 15px;
+  margin-right: 30px;
+}
+
+#pdapp #profile_tagline {
+  margin-top: 80px;
+  bottom: auto;
+}
+
+#pdapp #profile_stats {
+  width: 225px;
+  margin: 20px 30px 0 15px;
+  float: left;
+}
+
+#pdapp #profile_body {
+  margin: 20px 0 0 0;
 }
 
 #header {
