@@ -17,6 +17,7 @@ Router.map(function() {
         this.route('home');
         this.route('edit');
         this.route('browse');
+        this.route('search');
         this.route('profile', { path: 'profile/:profile_id' });		
     });
 });
