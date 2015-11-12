@@ -7,27 +7,27 @@ export default BaseAuthenticator.extend({
 	
 	restore(data) {
     const token = get(data, 'token');
-	    const identification = get(data, 'email');
-	    return new RSVP.Promise((resolve, reject) => {
-  			if (!isEmpty(token) && !isEmpty(identification)) {
-  				resolve(data);
-  			} else {
-  				reject();
-  			}
-	    });
+	  const identification = get(data, 'email');
+	  return new RSVP.Promise((resolve, reject) => {
+			if (!isEmpty(token) && !isEmpty(identification)) {
+				resolve(data);
+			} else {
+				reject();
+			}
+	  });
  	},
 	
 	authenticate(identification, password) {
-	    return new RSVP.Promise((resolve, reject) => {
-	    	const data = {};
-	    	data['password'] = password;
-	    	data['identification'] = identification;			
-	    	this.makeRequest(data).then(function(response) {
-	       		run(null, resolve, response);
-	     	}, function(xhr) {
-	        	run(null, reject, xhr.responseJSON || xhr.responseText);
-	      	});
-	    });
+    return new RSVP.Promise((resolve, reject) => {
+    	const data = {};
+    	data['password'] = password;
+    	data['identification'] = identification;			
+    	this.makeRequest(data).then(function(response) {
+        run(null, resolve, response);
+     	}, function(xhr) {
+        run(null, reject, xhr.responseJSON || xhr.responseText);
+      });
+    });
 	},
 	
 	invalidate(data) {
