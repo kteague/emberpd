@@ -188,12 +188,12 @@ section.second-page {
 
 #pdapp #profile_stats {
   width: 225px;
-  margin: 20px 30px 0 15px;
+  margin: 20px 0 0 15px;
   float: left;
 }
 
 #pdapp #profile_body {
-  margin: 20px 0 0 0;
+  margin: 20px 0 0 255px;
 }
 
 #header {

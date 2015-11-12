@@ -5,7 +5,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 	  session: Ember.inject.service('session'),
   
     model(params) {
-
       return this.store.findRecord('profile', params.profile_id);
     }
+    
 });

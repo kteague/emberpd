@@ -1,24 +1,42 @@
 <div class="row">
-  <div class="col-md-4">[Photo will go here]</div>
-  <div class="col-md-8">
-    <h3>Name</h3>
+  <div id="profile_photo">
+      <img src="/assets/handsome_guy.jpeg" alt="" />
+  </div>
+  <div id="profile_tagline">
+    <h3>Test Name{{model.name}}</h3>
     <p class="tagline">
     43 <i class="fa fa-heart love"></i>
-    Vancouver, Canada <i class="fa fa-heart love"></i>
-    Male</p>
+    {{model.city}}, {{model.country}} <i class="fa fa-heart love"></i>
+    {{model.gender}}</p>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-8">
-    <h4>About Me</h4>
-    <p>Text goes here</p>
-  </div>
-  <div class="col-md-4">
+  <div id="profile_stats">
+
     <h4>Looking For</h4>
-    <p>Long term? Travel?</p>
+    <p>TBD</p>
     
     <h4>My Details</h4>
-    <p>Height, Body, Smoking, Drinking, etc.</p>
+    <p>TBD</p>
+
+  </div>
+  <div id="profile_body">
+
+    {{#if model.about_me}}
+    <h4>About Me</h4>
+    {{model.about_me}}
+    {{/if}}
+    
+    {{#if model.interests}}
+    <h4>Interests</h4>
+    {{model.interests}}
+    {{/if}}
+
+    {{#if model.looking_for}}
+    <h4>Looking For</h4>
+    {{model.looking_for}}
+    {{/if}}
+
   </div>
 </div>
